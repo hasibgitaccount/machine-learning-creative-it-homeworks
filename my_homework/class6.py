@@ -4,7 +4,7 @@
 
 '''
 dict1 = {'key': 'value'}
-print(dict1['key'])
+print(dict1['key']) # to print the keys of a dict we will use this command 
 '''
 
 '''
@@ -81,3 +81,17 @@ in both of those scenario we are using the key as a normal index and the values 
 dict3 = {10: 100, 10:23}
 print(dict3[10])
 '''
+
+fruits = {
+    'yellow': ('banana', 'orange'),
+    'green': ['apple', 'guava']
+}
+print(fruits['green'])
+print(fruits)
+
+fruits1 = {
+    'yellow': {'banana':5, 'orange':5},
+    'green': {'apple':10, 'guava':10}
+}
+
+print(fruits1['yellow']['banana'])
