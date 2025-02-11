@@ -2,12 +2,12 @@
 ''' for example in oxford dictionary there are some words and then the meaning of those words. but a word can have multiple meaning . in python the dictionary works exactly the same. there are two main things . one is key whcih stands for the word and the value which stands for meaning . just like dictionary a key can have multiple values but not vice versa. 
 '''
 
-'''
+
 dict1 = {'key': 'value'}
 print(dict1['key']) # to print the keys of a dict we will use this command 
-'''
 
-'''
+
+
 dict2 = {
     'one':{'hasib': 'god gifted'},
      True:2,
@@ -22,9 +22,9 @@ print(dict2['one'])
 print(dict2[True])
 print(dict2.keys())
 print(dict2.values())
-'''
 
-'''
+
+
 classroom = {
     'girls': {'a':11, 'b':(22,44), 'c':33, 'd':{'roll':(55,66)}},
     'boys': ['d', 'e', 'f']
@@ -41,10 +41,10 @@ classroom['girls']['e'] = 100
 classroom['girls']['a'] = 111
 del classroom['girls']['c']
 print(classroom['girls'])
-'''
 
 
-'''
+
+
 classroom_girls = {'girls': {'a':11, 'b':(22,44), 'c':33, 'd':{'roll':(55,66)}}}
 classroom_boys = {'boys': ['d', 'e', 'f']}
 classroom_girls.update(classroom_boys)
@@ -60,10 +60,11 @@ print(list1.index(20))
 print(classroom_girls.items())
 print(len(classroom_girls.items()))
 print(len(classroom_girls))
-'''
+
 
 #in dictionary the key has to be unique
 #in contrast the value is not unique
+
 '''
 1. Trying to do slicing, indexing in dictionary is going to make you hate your life(not allowed). just kidding.
 2. modification is allowed
@@ -77,10 +78,10 @@ in both of those scenario we are using the key as a normal index and the values 
 
 
 
-'''
+
 dict3 = {10: 100, 10:23}
 print(dict3[10])
-'''
+
 
 fruits = {
     'yellow': ('banana', 'orange'),
