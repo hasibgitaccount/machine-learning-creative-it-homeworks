@@ -43,6 +43,8 @@ del classroom['girls']['c']
 print(classroom['girls'])
 '''
 
+
+'''
 classroom_girls = {'girls': {'a':11, 'b':(22,44), 'c':33, 'd':{'roll':(55,66)}}}
 classroom_boys = {'boys': ['d', 'e', 'f']}
 classroom_girls.update(classroom_boys)
@@ -54,3 +56,28 @@ print(classroom_girls.get('girl', 50))
 
 list1 = [10,20,30,40]
 print(list1.index(20))
+
+print(classroom_girls.items())
+print(len(classroom_girls.items()))
+print(len(classroom_girls))
+'''
+
+#in dictionary the key has to be unique
+#in contrast the value is not unique
+'''
+1. Trying to do slicing, indexing in dictionary is going to make you hate your life(not allowed). just kidding.
+2. modification is allowed
+3. you can assume the key as a index and the value as a element.
+here, list1 = [10,20]
+dict1 = {0:10,1:20}
+list1[0] = 10
+dict1[0] = 10
+in both of those scenario we are using the key as a normal index and the values as a normal element inside other data structures
+'''
+
+
+
+'''
+dict3 = {10: 100, 10:23}
+print(dict3[10])
+'''
