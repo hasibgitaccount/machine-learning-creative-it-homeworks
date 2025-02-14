@@ -8,9 +8,17 @@
 ''' 
 
 '''
-int_data_type = (10, 5.7, 'pretty_girl', True)
-print(type(int_data_type[0]))# integer
-print(type(int_data_type[1]))# float
-print(type(int_data_type[2]))# string
-print(type(int_data_type[3]))# boolean
+data_type = (10, 5.7, 'pretty_girl', True)
+print(type(data_type[0]))# integer
+print(type(data_type[1]))# float
+print(type(data_type[2]))# string
+print(type(data_type[3]))# boolean
 '''
+
+# INT TO FLOAT IMPLICIT CONVERSION
+print('BEFORE')
+var = 5
+print(type(var))
+float_var = float(var) # stored the converted float in a new variable
+print('AFTER')
+print(float_var, type(float_var)) # called the variable and checked the type
