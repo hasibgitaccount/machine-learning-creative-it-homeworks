@@ -132,3 +132,6 @@ print(not 2 > 3 and 3 < 4 ) # first it worked on not operator, then on and opera
 print(3 in (3,4,5)) # True
 print(3 in (4,5,6)) # False
 '''
+
+ 
+
