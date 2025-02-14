@@ -32,4 +32,7 @@ print(list2)
 print(list2[1])
 # by that example we can easily get to the conclusion that list supports indexing and slicing
 
-
+#you can also do this in list 
+list4 = [10,30,20,40,50,60,70,80,90]
+print(list4.index(30)) # this is index lookup. with it you can know the index of any element inside the list.
+print(list4[1]) # this is classic indexing.
