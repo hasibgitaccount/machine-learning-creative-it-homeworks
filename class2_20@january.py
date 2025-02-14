@@ -47,10 +47,88 @@ print(my_first_variable) # we can check it using print function.
 
 # how to name a variable
 # 1. the first character has to be small or capital letter. - A, b
-# 2. it cannot have number or special as the first lettr but after the first letter(small letter) - %$&*
+# 2. it cannot have number as the first lettr but after the first letter(small letter) - %$&*
 # 3. first letter can have a underscore (_). - _my_variable
 # 4. python reserved keywords, always try to use them as variable names.
 # 5. case sensitive. python recognizes small and capital letter differently. try to keep that in mind. a, A
+# 6. no space is allowed in the name of the variable.
+# 7. alpha numeric is allowed but not special character in variable name.
 '''
 
+'''
+# 3. ASSINGMENT OPERATOR
+a = 5
+print(a)
 
+a += 2
+print(a)
+
+a -= 2
+print(a)
+
+a *= 2
+print(a)
+
+a /= 2
+print(a)
+
+a //= 2
+print(a)
+
+a %= 2
+print(a)
+
+a **= 2
+print(a)
+'''
+
+# 4. IDENTITY OPERATOR
+
+'''
+# is -> == 
+# is not -> !=
+
+# identity operator is very similar to assingment operator . mainly (equal to) or (not equal to)
+
+print(3 == 3) # True
+print( 3 is 3) # True
+
+print(3 != 4) # True
+print(3 is not 4) # True
+
+print(3 == 4) # False
+print(3 is 4) # False
+
+print(3 != 3) # False
+print(3 is not 3) # False
+
+'''
+
+# 5. LOGICAL OPERATORS
+
+'''
+a. OR
+# at least single condition has to be valid to get output True.
+print(2 > 3 or 3 > 2)  # True
+print(2 < 3 or 3 < 4) # True
+print(2 >3 or 3 > 4) # False
+
+b. AND
+# both condition has to be valid to get output True.
+print(2 > 3 and 3 > 2)# False 
+print(2 > 3 and 3 > 4) # False
+print(2 < 3 and 3 < 4) # True
+
+c. NOT
+#not is going to make true to false and false to true
+print(not(2 > 3 and 3 > 4)) # True
+print(not 2 > 3 and 3 < 4 ) # first it worked on not operator, then on and operator.
+'''
+
+# 6. MEMBERSHIP OPERATORS
+
+'''
+
+print(3 in (3,4,5)) # True
+print(3 in (4,5,6)) # False
+'''
