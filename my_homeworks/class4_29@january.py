@@ -7,6 +7,7 @@
 '''
 
 # LIST
+# list support both data types and data structures.
 
 #list support duplicate value
 list15 = [1,1,1,2,3]
