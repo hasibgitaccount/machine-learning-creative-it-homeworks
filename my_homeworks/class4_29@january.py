@@ -75,6 +75,9 @@ remove(value) is used to delete the first occurence of a specific value.
 if there are multiple values then the first one will be deleted, if there are only one then it will be deleted.
 '''
 '''list6 = [10,10,10,20]
+print(sum(list6))
+print(max(list6))
+print(min(list6))
 list6.remove(10)
 print(list6)
 list7 = [10,20]
@@ -96,10 +99,10 @@ print(list8)'''
 
 # del[] is used to remove an element or delete the entire element
 
-list12 = ['shahrukh', 'salman', 'aamir']
+'''list12 = ['shahrukh', 'salman', 'aamir']
 print(list12)
 del list12[2]
-print(list12)
+print(list12)'''
 
 '''
 if you delete the whole list then you cant print it anymore.
@@ -138,3 +141,6 @@ list11 = ['me', 'my bros']
 print(list11)
 list11.pop()
 print(list11)'''
+
+# LIST INDEXING, SLICING (POSITIVE, NEGATIVE)
+
