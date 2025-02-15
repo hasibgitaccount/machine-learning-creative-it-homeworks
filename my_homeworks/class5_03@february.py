@@ -1,3 +1,5 @@
+# SET 
+# set does not support data structure inside it 
 set1 = {1,2,3}
 print(set1)
 print(type(set1))
@@ -35,4 +37,112 @@ print(list2[1])
 #you can also do this in list 
 list4 = [10,30,20,40,50,60,70,80,90]
 print(list4.index(30)) # this is index lookup. with it you can know the index of any element inside the list.
-print(list4[1]) # this is classic indexing.
+print(list4[1])# this is classic indexing.
+
+#set is unordered. list is ordered. (user perspective). set has its own personal order.
+
+list5 = [1,2,5,4,7,6,9,8]
+print(list5)
+set5 = {1,5,3,9,7,2,'a'}
+print(set5)
+
+# set does'nt support item assingment. list does.
+'''set1 = {10.20,30}
+set1[1] = 40
+print(set1) # its going to give a error. 
+'''
+
+# both set and list support modification.
+
+# ADD (it will add according to the sets own order system)
+
+set6 = {10, 20, 30}
+set6.add(40)
+print(set6)
+
+# ROMOVE (you just have to write the value and not the index)
+
+set6.remove(20)
+print(set6)
+
+# UPDATE (to add multiple elements at a single time in a set.)
+
+set6.update([50, 60, 70])
+print(set6)
+
+# POP (pop in set removes and returns(stores) a random element in a variable.)
+
+set8 = {10,90,80,55}
+removed = set8.pop()
+print(set8)
+print(removed)
+
+# if you are not assinging new variable then it will just remove them randomly.
+
+set6.pop()
+print(set6)
+set6.pop()
+print(set6)
+
+# CLEAR (clear everything like list and keeps the set itself.)
+
+set7 = {10,2, 30}
+set7.clear()
+print(set7)
+
+# DISCARD (discard removes an element from the set. but it wont raise the error if not found.)
+
+set9 = {11,22,33,44,55}
+set9.discard(55)
+print(set9)
+set9.discard(77)
+print(set9)
+
+# intersection and union
+
+set10 = {12,23,34,45}
+set11 = {13,24,35,45}
+set12 = set10.intersection(set11)
+print(set12)
+set13 = set10.union(set11)
+print(set13)
+print(set10 - set11)
+set14 = set10.difference(set11) # alternative of minus symbol(-)
+print(set14)
+
+# convert list to set.
+
+list1 = [1,1,1,1,2,3,4,5,6,4]
+print(list1)
+set15 = set(list1)
+print(set15)
+
+
+# TUPLE
+# tuple support both data structure and data types inside it.
+
+# tuple support duplicate value
+
+tuple1 = (1,1,1,1,2,6,45,6,7)
+print(tuple1) # tuple is ordered like list. no changed have been made inside the tuple
+print(type(tuple1))
+print(len(tuple1))
+
+
+'''
+# tuple support item assingment
+
+tuple2 = (19,29)
+tuple2[1] = 22
+print(tuple2) # it will give error'''
+
+# tuple does not support any modification. the only way around is using nested list or set for modification.
+
+tuple3 = (1,[2,3], {4,5}, 'hasib', 6.6, True)
+print(type(tuple3[1]))
+print(type(tuple3[2]))
+tuple3[1][0] = 200 # this is the only way to do some modification
+print(tuple3)
+tuple3[1].append(400) # you can modify like this
+print(tuple3)
+
