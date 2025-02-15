@@ -23,7 +23,7 @@ print(list2[3])'''
 # 1. add a element. -> APPEND, EXTEND, INSERT.
 # 2. remove a element -> POP, REMOVE, DEL, CLEAR.
 
-list3 = [10, 20, 30, 40, 50]
+list3 = [10, 20, 30, 40, 50,60]
 '''
 list3[2] = 3
 print(list3)'''
@@ -144,3 +144,17 @@ print(list11)'''
 
 # LIST INDEXING, SLICING (POSITIVE, NEGATIVE)
 
+# INDEXING
+
+list13 = [10, 20, 30, 40, 50]
+'''print(list13[1])
+print(list13.index(20))''' # in .index your have to pass element not its index.
+
+# SLICING
+
+# [s_index : e_index + 1]
+
+print(list13[1:4])
+print(list13[1:])# to the ending
+print(list13[:4])# from the beginning
+print(list13[:])# from first to last.
