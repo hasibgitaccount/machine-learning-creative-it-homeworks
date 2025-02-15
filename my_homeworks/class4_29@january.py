@@ -175,8 +175,14 @@ print(list13[: -1])
 print(list13[-4 :])
 print(list13[:len(list13)])'''
 
-# stride slicing
+# stride slicing [s_index : e_index + 1 : gap + 1](positive)
 
-'''list14 = [10, 'a', 20, 'b', 30, 'c', 40, 'd', 50]
-print(list14[:len(list14): 2])
+list14 = [10, 'a', 20, 'b', 30, 'c', 40, 'd', 50]
+'''print(list14[:len(list14): 2])
 print(list14[1:len(list14): 2])'''
+
+#stride slicing [s_index : e_index + 1 : -(gap + 1)](negative)
+'''print(list14[:: -2])'''
+
+# REVERSE SLICING [s_index_after_reversing: end_index_after_reversing -1: -1]
+'''print(list14[6:1:-1])'''
