@@ -67,3 +67,74 @@ list5.extend((55,66))
 print(list5)
 list5.extend([77,88])
 print(list5)'''
+
+# REMOVE
+
+'''
+remove(value) is used to delete the first occurence of a specific value.
+if there are multiple values then the first one will be deleted, if there are only one then it will be deleted.
+'''
+'''list6 = [10,10,10,20]
+list6.remove(10)
+print(list6)
+list7 = [10,20]
+list7.remove(20)
+print(list7)'''
+
+# CLEAR
+
+'''
+clear is used to remove all elements from a list, laeving it empty.
+it does not delete the list, only the element inside.
+'''
+
+'''list8 = [1,2,3]
+list8.clear()
+print(list8)'''
+
+# DEL
+
+# del[] is used to remove an element or delete the entire element
+
+list12 = ['shahrukh', 'salman', 'aamir']
+print(list12)
+del list12[2]
+print(list12)
+
+'''
+if you delete the whole list then you cant print it anymore.
+del list12
+print(list12)
+'''
+
+# POP
+
+'''
+using .pop(index) will remove an element from an list and gives it back to you in another variable
+if no index is provided then its going to remove the last item
+'''
+
+list9 = ['hasib', 'neha'] 
+'''
+print(list9)
+removed = list9.pop()
+print(list9)
+print(removed)'''
+
+list0 = ['i', 'my_love']
+'''
+print(list0)
+removed1 = list0.pop(0)
+print(list0)
+print(removed1)'''
+
+# if you dont want to store the value then everything will be same except it wont store it.
+'''list10 = ['chinku', 'pinku']
+print(list10)
+list10.pop(1)
+print(list10)
+
+list11 = ['me', 'my bros']
+print(list11)
+list11.pop()
+print(list11)'''
