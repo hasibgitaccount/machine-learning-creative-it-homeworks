@@ -146,15 +146,37 @@ print(list11)'''
 
 # INDEXING
 
+# positive indexing
 list13 = [10, 20, 30, 40, 50]
 '''print(list13[1])
-print(list13.index(20))''' # in .index your have to pass element not its index.
+print(list13.index(20)) # in .index your have to pass element not its index.
+'''
+
+# negative indexing.
+'''print(list13[-1])
+print(-len(list13) + list13.index(20))''' # pretty complicated lol
+
 
 # SLICING
 
-# [s_index : e_index + 1]
-
-print(list13[1:4])
+# positive slicing [s_index : e_index + 1]
+'''print(list13[1:4])
 print(list13[1:])# to the ending
 print(list13[:4])# from the beginning
 print(list13[:])# from first to last.
+print(list13[: len(list13)])
+print(list13[: len(list13)+1])
+'''
+
+# negative slicing [s_index : e_index + 1]
+
+'''print(list13[-4 : -1])
+print(list13[: -1])
+print(list13[-4 :])
+print(list13[:len(list13)])'''
+
+# stride slicing
+
+'''list14 = [10, 'a', 20, 'b', 30, 'c', 40, 'd', 50]
+print(list14[:len(list14): 2])
+print(list14[1:len(list14): 2])'''
