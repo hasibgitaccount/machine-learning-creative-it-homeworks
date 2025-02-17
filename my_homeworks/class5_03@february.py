@@ -130,7 +130,7 @@ print(len(tuple1))
 
 
 '''
-# tuple support item assingment
+# tuple doesn't support item assingment
 
 tuple2 = (19,29)
 tuple2[1] = 22
