@@ -20,3 +20,33 @@ def multiply(mu):
 list2 = [1,2,3,4]
 mul = multiply(list2)
 print(mul)
+
+# 3. Write a Python program to get the largest number from a list.
+def find_large_num(large):
+    result = large[0]
+    for i in large:
+        if i > result:
+            result = i
+        else:
+            pass
+    return result
+
+list3 = [1,2,3,4]
+lar = find_large_num(list3)
+print(lar)
+
+# 4. Write a Python program to get the smallest number from a list.
+def find_small_num(small):
+    result = small[0]
+    for i in small:
+        if i < result:
+            result = i
+        else:
+            pass
+    return result
+list4 = [4,3,2,1]
+sma = find_small_num(list4)
+print(sma)
+
+# 5. Write a Python program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings.
+
