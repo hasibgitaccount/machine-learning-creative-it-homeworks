@@ -50,3 +50,90 @@ print(sma)
 
 # 5. Write a Python program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings.
 
+def string(str):
+    result = 0
+    for i in str:
+        if len(i) > 1 and i[0] == i[-1]:
+            result += 1
+        else:
+            pass
+    return result
+
+list5 = ['abc', 'aba', '1221']
+count = string(list5)
+print(count)
+
+# 6. Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
+def tuple_sort(tuple):
+    return sorted(tuple, key=lambda x: x[-1])
+
+list6 = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+sorty = tuple_sort(list6)
+print(sorty)
+
+# 7. Write a Python program to remove duplicates from a list.
+list7 = [10,20,30,40,50,60,30,20,10]
+'''def distinguish(duplicate):
+    set1 = set()
+    for i in duplicate:
+        if i not in set1:
+            set1.add(i)
+    return set1
+
+result = distinguish(list7)
+print(list(result))'''
+
+def alternative(duplicate):
+    return list(set(duplicate))
+
+result = alternative(list7)
+print(result)
+
+# 8. Write a Python program to check a list is empty or not.
+def empty_or_full(x):
+    if not x:
+        return 'the list is empty'
+    else:
+        return 'the list is not emply'
+
+list8 = [] 
+check = empty_or_full(list8)
+print(check)
+
+# 9. Write a Python program to clone or copy a list
+def clones(x):
+    return list(x)
+
+list9 = [1,2,3,4,5]
+cloning = clones(list9)
+print(cloning)
+
+# i added some element in the clone variable but it didnt apply in the real list.
+cloning.append(6)
+print(cloning)
+print(list9)
+
+# 10. Write a Python program to find the list of words that are longer than n from a given list of words.
+def crazy(n, x):
+    result = []
+    for i in x:
+        if len(i) > n:
+            result.append(i)
+    return result
+
+list10 = ['apple', 'cherry', 'banana']
+ok = crazy(5, list10)
+print(ok)
+
+# 11. Write a Python function that takes two lists and returns True if they have at least one common member.
+def inter(n, x):
+    return bool(set(n) & set(x))
+
+list11 = [1,2,3,4,5]
+list11_copy = [9,8,7,6,5]
+checking = inter(list11, list11_copy)
+print(checking)
+
+# 12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements. 
+
+
