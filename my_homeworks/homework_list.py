@@ -124,3 +124,16 @@ def crazy(n, x):
 list10 = ['apple', 'cherry', 'banana']
 ok = crazy(5, list10)
 print(ok)
+
+# 11. Write a Python function that takes two lists and returns True if they have at least one common member.
+def inter(n, x):
+    return bool(set(n) & set(x))
+
+list11 = [1,2,3,4,5]
+list11_copy = [9,8,7,6,5]
+checking = inter(list11, list11_copy)
+print(checking)
+
+# 12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements. 
+
+
