@@ -134,6 +134,17 @@ list11_copy = [9,8,7,6,5]
 checking = inter(list11, list11_copy)
 print(checking)
 
+# another way
+def clone(x1, x2):
+    for i in x1:
+        if i in x2:
+            return True
+    else:
+        return False
+        
+cloning = clone(list11, list11_copy)
+print(cloning)
+
 # 12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements. 
 def remove_elements(x):
     '''result = []
