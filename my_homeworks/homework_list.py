@@ -248,3 +248,36 @@ e = [1,2,3,4,5,6]
 calc = even_numbers(e)
 print(calc)'''
 
+# 21. Write a Python program to convert a list of characters into a string.
+def list_to_string(x):
+    return ''.join(x)
+
+list21 = ['h','e','l','l','o']
+consolidate = list_to_string(list21)
+print(consolidate)
+
+# 22. Write a Python program to find the index of an item in a specified list.
+
+list22 = [10,20,30]
+fit = list22.index(10)
+print(fit)
+
+# 23. Write a Python program to flatten a shallow list.
+def flatten(x):
+    import itertools
+    return list(itertools.chain(*x))
+
+list23 = [[1,2,3],[4,5,6],[6,7,8,9]]
+merge = flatten(list23)
+print(merge)
+
+# Write a Python program to append a list to the second list
+def appending(x, y):
+    return x + y
+
+list24 = [1,2,3]
+list24_copy = [4,5,6]
+merging = appending(list24, list24_copy)
+print(merging)
+
+# 25. Write a Python program to select an item randomly from a list.
