@@ -62,6 +62,7 @@ called = even_10(a)
 print(called)
 
 
+# will check if it is prime or non-prime
 def check_prime(n):
     assume = 'prime'
     for i in range(2,n):
@@ -75,12 +76,37 @@ result = check_prime(existence)
 print(result)
 
 # find the first 10 prime number
-counter = 0
-for i in range(1,1000000):
-    result = check_prime(i)
-    if result == 'prime':
-        counter += 1
-        if counter <= 10:
-            print(i)
-        else:
-            break
+def prime_number(x):
+    counter = 0
+    primary = []
+    for i in range(1,x):
+        result = check_prime(i)
+        if result == 'prime':
+            counter += 1
+            if counter <= 10:
+                primary.append(i)
+            else:
+                break
+    return primary
+
+a = 10000000
+fast = prime_number(a)
+print(fast)
+
+# find the first ten non-prime number
+def non_prime(x):
+    counter = 0
+    non_primary = []
+    for i in range(2,x):
+        result = check_prime(i)
+        if result == 'non prime':
+            counter += 1
+            if counter <= 10:
+                non_primary.append(i)
+            else:
+                break
+    return non_primary
+
+b = 10000000
+slow = non_prime(b)
+print(slow)
