@@ -135,5 +135,29 @@ checking = inter(list11, list11_copy)
 print(checking)
 
 # 12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements. 
+def remove_elements(x):
+    '''result = []
+    for i, v in enumerate(x):
+        if i not in (0,4,5):
+            result.append(v)
+    return result'''
+    result = [v for i, v in enumerate(x) if i not in (0,4,5)]
+    return result
 
+
+list12 =  ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+showdown = remove_elements(list12)
+print(showdown)
+
+
+
+# my first usecase of list comprehension.
+'''def even_numbers(x):
+    even = [i for i in x if i % 2 == 0]
+    return even
+
+
+e = [1,2,3,4,5,6]
+calc = even_numbers(e)
+print(calc)'''
 
