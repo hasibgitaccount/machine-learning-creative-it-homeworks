@@ -149,6 +149,32 @@ list12 =  ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 showdown = remove_elements(list12)
 print(showdown)
 
+# 13. Write a Python program to generate a 3*4*6 3D array whose each element is *
+def arrays(layers, rows, columns):
+    result = [[['*' for _ in range(columns)] for _ in range(rows)] for _ in range(layers)]
+    '''for _ in range(layers):
+        layer = []
+        for _ in range(rows):
+            row = []
+            for _ in range(columns):
+                row.append('*')
+            
+            layer.append(row)
+
+        result.append(layer)'''
+
+    return result
+
+def print_3d_array(x):
+    for layer in x:
+        for row in layer:
+            print(row)
+
+        print()
+
+list13 = arrays(3,4,6)        
+print_3d_array(list13)
+
 
 
 # my first usecase of list comprehension.
