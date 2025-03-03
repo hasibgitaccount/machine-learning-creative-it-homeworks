@@ -175,6 +175,56 @@ def print_3d_array(x):
 list13 = arrays(3,4,6)        
 print_3d_array(list13)
 
+# 14. Write a Python program to print the numbers of a specified list after removing even numbers from it. 
+def remove_even(x):
+    result = [i for i in x if i % 2 != 0]
+    return result
+
+list14 = [7, 8, 120, 25, 44, 20, 27]
+even = remove_even(list14)
+print(even)
+
+# question 15 and 16 is unavailable.
+# 17. Write a Python program to generate and print a list except for the first 5 elements, where the values are square of numbers between 1 and 30 (both included).
+def square(x):
+    result = [i**2 for i in range(1, x+1)]
+    return result
+
+list17 = 30
+multiplication = square(list17)[5:]
+print(multiplication)
+
+# 18. Write a Python program to generate all permutations of a list in Python.
+def permutating(x):
+    from itertools import permutations
+    result = list(permutations(x))
+    return result
+
+list18 = [1,2,3]
+done = permutating(list18)
+print(done)
+
+
+# 19.  Write a Python program to get the difference between the two lists.
+def difference(x1, x2):
+    result = [i for i in x1 if i not in x2]
+    return result
+
+list19 = [1,2,3,4,5]
+list19_copy = [9,8,7,6,5]
+yup = difference(list19, list19_copy)
+print(yup)
+
+
+# 20. Write a Python program access the index of a list.
+def access_index(x):
+    result =[(i, v) for i, v in enumerate(x)]
+    return result
+
+list20 = [10,20,30,40,50]
+call = access_index(list20)
+print(call)
+
 
 
 # my first usecase of list comprehension.
