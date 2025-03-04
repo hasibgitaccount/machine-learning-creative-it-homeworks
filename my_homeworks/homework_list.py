@@ -352,6 +352,15 @@ print(contain_or_not_sublist(list32, list32_clone))
 print(contain_or_not_sublist(list32, list32_another))
 
 # 33. Write a Python program to generate all sublists of a list.
+def generate_sublist(x):
+    collect = []
+    for i in range(len(x)):
+        for n in range(i + 1, len(x) + 1):
+            collect.append(x[i:n])
+    return collect
+
+list33 = [1, 2, 3]
+print(generate_sublist(list33))
 
 # 34.  Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.
 
