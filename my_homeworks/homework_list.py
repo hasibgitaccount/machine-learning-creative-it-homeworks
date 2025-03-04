@@ -278,6 +278,17 @@ time = fetch_random_item(list25)
 print(time)
 
 # 26. Write a python program to check whether two lists are circularly identical. 
+def circular(x1, x2):
+    if len(x1) != len(x2):
+        return False
+    
+    return any(x1[i:] + x1[:i] == x2 for i, v in enumerate(x1))
+
+list26 = [1, 2, 3, 4]
+list26_copy = [3, 4, 1, 2]
+list26_clone = [2, 3, 4, 5]
+print(circular(list26, list26_copy))
+print(circular(list26, list26_clone))
 
 # 27. Write a Python program to find the second smallest number in a list.
 def second_smallest(x):
@@ -324,20 +335,25 @@ low = 10
 high = 25
 print(odd_question(list31, low, high))
 
-# 32.
+# 32. Write a Python program to check whether a list contains a sublist.
 
-# 33.
+# 33. Write a Python program to generate all sublists of a list.
 
-# 34.
+# 34.  Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.
 
-# 35.
+# 35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n.
 
-# 36.
+# 36. Write a Python program to get variable unique identification number or string.
 
-# 37. 
+# 37. Write a Python program to find common items from two lists
 
-# 38.
+# 38. Write a Python program to change the position of every n-th value with the (n+1)th in a list.
 
-# 39.
+# 39. Write a Python program to convert a list of multiple integers into a single integer
+def concatinate_integer(x):
+    '''return ''.join(x)
 
-# 40. 
+list39 = [11,33,56]
+print(concatinate_integer(list39))'''
+
+# 40. Write a Python program to split a list based on first character of word.
