@@ -23,27 +23,15 @@ print(mul)
 
 # 3. Write a Python program to get the largest number from a list.
 def find_large_num(large):
-    result = large[0]
-    for i in large:
-        if i > result:
-            result = i
-        else:
-            pass
-    return result
+    return sorted(large)[-1]
 
-list3 = [1,2,3,4]
+list3 = [121,220,31,47]
 lar = find_large_num(list3)
 print(lar)
 
 # 4. Write a Python program to get the smallest number from a list.
 def find_small_num(small):
-    result = small[0]
-    for i in small:
-        if i < result:
-            result = i
-        else:
-            pass
-    return result
+    return sorted(small)[0]
 list4 = [4,3,2,1]
 sma = find_small_num(list4)
 print(sma)
@@ -291,11 +279,23 @@ print(time)
 
 # 26. Write a python program to check whether two lists are circularly identical. 
 
-# 27.
+# 27. Write a Python program to find the second smallest number in a list.
+def second_smallest(x):
+    return sorted(x)[1]
 
-# 28.
+list27 = [90,50,20,10,40,70]
+here = second_smallest(list27)
+print(here)
 
-# 29.
+# 28. Write a Python program to find the second largest number in a list.
+def second_largest(x):
+    return sorted(x)[-2]
+
+list28 = [90,50,20,10,40,70]
+again = second_largest(list28)
+print(again)
+
+# 29. Write a Python program to get unique values from a list.
 
 # 30.
 
