@@ -292,14 +292,37 @@ def second_largest(x):
     return sorted(x)[-2]
 
 list28 = [90,50,20,10,40,70]
-again = second_largest(list28)
-print(again)
+print(second_largest(list28))
+
 
 # 29. Write a Python program to get unique values from a list.
+def sort_the_unique(x):
+    return list(set(x))
 
-# 30.
+list29 = [10,10,30,60,70,30,20]
+print(sort_the_unique(list29))
 
-# 31.
+# 30.  Write a Python program to get the frequency of the elements in a list.
+def frequency_check(x):
+    from collections import Counter
+    return dict(Counter(x))
+
+list30 = [1, 2, 2, 3, 3, 3, 4, 5, 5, 5, 5]
+print(frequency_check(list30))
+
+# 31. Write a Python program to count the number of elements in a list within a specified range.
+def odd_question(x1, x2, x3):
+    return sum(1 for i in x1 if x2 <= i <= x3)
+    '''counter = 0
+    for i in x1:
+        if x2 <= i <= x3:
+            counter += 1
+    return counter'''
+
+list31 = [3, 10, 7, 15, 20, 5, 8, 13]
+low = 10
+high = 25
+print(odd_question(list31, low, high))
 
 # 32.
 
@@ -317,4 +340,4 @@ print(again)
 
 # 39.
 
-# 40.
+# 40. 
