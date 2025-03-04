@@ -259,7 +259,7 @@ list23 = [[1,2,3],[4,5,6],[6,7,8,9]]
 merge = flatten(list23)
 print(merge)
 
-# Write a Python program to append a list to the second list
+# 24. Write a Python program to append a list to the second list
 def appending(x, y):
     return x + y
 
@@ -363,7 +363,19 @@ list33 = [1, 2, 3]
 print(generate_sublist(list33))
 
 # 34.  Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.
+def sieve_of_eratosthenes(x):
+    primes = [True] * (x + 1)
+    primes[0] = primes[1] = False
 
+    for i in range(2, int(x ** 0.5) + 1): # doing squeare root
+        if primes[i]: # means, if primes[i] == True
+            for j in range(i*i,x + 1, i):
+                primes[j] = False
+
+    return [i for i in range(x + 1) if primes[i]]
+
+variable34 = 50
+print(sieve_of_eratosthenes(variable34))
 
 # 35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n.
 def concatenate(x, n):
@@ -401,12 +413,34 @@ list37_copy = [9,8,7,6,5,4]
 print(common_items(list37,list37_copy))
 
 # 38. Write a Python program to change the position of every n-th value with the (n+1)th in a list.
+def position_changing(x):
+    for i in range(0,len(x) - 1, 2):
+         x[i], x[i + 1] = x[i + 1] , x[i]
+    return x
+
+list38 = [1, 2, 3, 4, 5, 6]
+print(position_changing(list38))
 
 # 39. Write a Python program to convert a list of multiple integers into a single integer
-def concatinate_integer(x):
-    '''return ''.join(x)
+def connect_int(x):
+    return int(''.join(list(map(str, x))))
 
-list39 = [11,33,56]
-print(concatinate_integer(list39))'''
+list39 = [1, 2, 3, 4, 5]
+print(connect_int(list39))
 
 # 40. Write a Python program to split a list based on first character of word.
+
+def add_bla(x):
+    # step1
+    from collections import defaultdict
+    groups = defaultdict(list)
+
+    #step2
+    for i in x:
+        first_char = i[0]
+        groups[first_char].append(i)
+
+    return groups
+
+list40 = ["apple", "banana", "apricot", "blueberry", "cherry"]
+print(add_bla(list40))
