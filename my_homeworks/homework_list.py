@@ -336,6 +336,20 @@ high = 25
 print(odd_question(list31, low, high))
 
 # 32. Write a Python program to check whether a list contains a sublist.
+def contain_or_not_sublist(x1,x2):
+    for i in range(len(x1) - len(x2) + 1):
+        if x1[i:i+len(x2)] == x2:
+            return True
+    return False
+
+list32 = [1, 2, 3, 4, 5]
+list32_copy = [2, 3]
+list32_clone = [1, 5]
+list32_another = [3, 4, 5]
+
+print(contain_or_not_sublist(list32, list32_copy))  
+print(contain_or_not_sublist(list32, list32_clone))  
+print(contain_or_not_sublist(list32, list32_another))
 
 # 33. Write a Python program to generate all sublists of a list.
 
