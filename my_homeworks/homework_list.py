@@ -364,11 +364,41 @@ print(generate_sublist(list33))
 
 # 34.  Write a Python program using Sieve of Eratosthenes method for computing primes upto a specified number.
 
+
 # 35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n.
+def concatenate(x, n):
+    return [i + str(z) for i in x for z in range(1, n+1)]
+    '''store = []
+    for i in x:
+        for z in range(1, n + 1):
+            store.append(i + str(z))
+    return store'''
+
+list35 = ["a", "b", "c"]
+variable35 = 3
+print(concatenate(list35, variable35))
 
 # 36. Write a Python program to get variable unique identification number or string.
+def unique_id(x,y,z):
+    return id(x), id(y), id(z)
+
+x1 = 100
+y1 = "Hello"
+z1 = [1, 2, 3]
+print(unique_id(x1,y1,z1))
 
 # 37. Write a Python program to find common items from two lists
+def common_items(x, y):
+    return [i for i in x if i in y]
+    '''vault = []
+    for i in x:
+        if i in y:
+                vault.append(i)
+    return vault'''
+
+list37 = [1,2,3,4,5]
+list37_copy = [9,8,7,6,5,4]
+print(common_items(list37,list37_copy))
 
 # 38. Write a Python program to change the position of every n-th value with the (n+1)th in a list.
 
