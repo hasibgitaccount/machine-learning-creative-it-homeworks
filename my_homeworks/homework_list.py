@@ -281,3 +281,40 @@ merging = appending(list24, list24_copy)
 print(merging)
 
 # 25. Write a Python program to select an item randomly from a list.
+def fetch_random_item(x):
+    import random
+    return random.choice(x)
+
+list25 = ['chinku','pinku','shullu','shukshuk','lokpak']
+time = fetch_random_item(list25)
+print(time)
+
+# 26. Write a python program to check whether two lists are circularly identical. 
+
+# 27.
+
+# 28.
+
+# 29.
+
+# 30.
+
+# 31.
+
+# 32.
+
+# 33.
+
+# 34.
+
+# 35.
+
+# 36.
+
+# 37. 
+
+# 38.
+
+# 39.
+
+# 40.
