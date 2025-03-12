@@ -605,3 +605,204 @@ def small_tuple(x):
 list60 = [(4, 1), (1, 2), (6, 4),(5,0)]
 print(small_tuple(list60))
 
+# 61. Create a list of empty dictionaries.
+def empty_dict(x):
+    return [{} for i in range(x)]
+    '''empty_list = []
+    for i in range(x):
+        empty_list.append({})
+    return empty_list'''
+
+dummy61 = 5
+print(empty_dict(dummy61))
+
+# 62. Write a Python program to print a list of space-separated elements.
+list62 = [1, 2, 3, 4, 5]
+print(*list62)
+
+# 63. . Write a Python program to insert a given string at the beginning of all items in a list.
+def adding_start(x1,x2):
+    add = []
+    for i in x1:
+        add.append(x2 + str(i))
+    return add
+
+list63 = [1,2,3,4]
+dummy63 = 'emp'
+print(adding_start(list63, dummy63))
+
+# 64. Write a Python program to iterate over two lists simultaneously.
+def simultaneous(x1, x2):
+    for (i, j) in zip(x1, x2):
+        print(i,j)
+
+list64 = [1, 2, 3]
+list64_copy = ['red', 'white', 'black']
+simultaneous(list64, list64_copy)
+
+# 65. Write a Python program to move all zero digits to end of a given list of numbers.
+def last_zero(x):
+    zero_count = x.count(0)
+
+    x = [i for i in x if i != 0]
+    x.extend([0]*zero_count)
+    return x
+
+list65 = [3, 4, 0, 0, 0, 6, 2, 0, 6, 7, 6, 0, 0, 0, 9, 10, 7, 4, 4, 5, 3, 0, 0, 2, 9, 7, 1]
+print(last_zero(list65))
+
+# 66. Write a Python program to find the list in a list of lists whose sum of elements is the highest.
+def highest_sum(x):
+    return max(x, key= sum)
+
+list66 = [[1,2,3], [4,5,6], [10,11,12], [7,8,9]]
+print(highest_sum(list66))
+            
+# 67. Write a Python program to find all the values in a list that are greater than a specified number.
+def condition(x1, x2):
+    for i in x1:
+        if i > x2:
+            return True
+    return False
+
+list67 = [1, 5, 3, 7, 9, 2]
+dummy67 = 4
+print(condition(list67, dummy67))
+
+# 69. Write a Python program to remove duplicates from a list of lists.
+def duplicate_out(x):
+    # return [list(j) for j in set(tuple(i) for i in x)]
+    import itertools
+
+    new_list = sorted(x)
+
+    main_list = [i for i,j in itertools.groupby(new_list)]
+    return main_list
+
+list69 = [[1, 2], [2, 3], [1, 2]]
+print(duplicate_out(list69))
+
+# 70.  Write a Python program to get the depth of a dictionary.
+def starting_with(x1,x2):
+    return [i for i in x1 if i.startswith(x2)]
+
+list70 = ['abcd', 'abc', 'bcd', 'bkie', 'cder', 'cdsw', 'sdfsd', 'dagfa', 'acjd']
+print(starting_with(list70, 'a'))
+
+# 71. Write a Python program to check whether all dictionaries in a list are empty or not. 
+def all_empty_or_not(x):
+    return all(not i for i in x)
+
+list71 = [{}, {}, {}]
+print(all_empty_or_not(list71))
+
+# 72. Write a Python program to flatten a given nested list structure.
+def flattening(x):
+    return [item for sublist in x for item in(sublist if isinstance(sublist, list) else[sublist])]
+    '''flattened_list = []
+
+    for sublist in x:
+        if isinstance(sublist, list):
+            for item in sublist:
+                flattened_list.append(item)
+        else: 
+            flattened_list.append(sublist)
+    return flattened_list'''
+
+list72 = [0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]
+print(flattening(list72))
+
+# 73. Write a Python program to remove consecutive duplicates of a given list.
+def remove_consecutive_duplicate(x1):
+    return [v for i,v in enumerate(x1) if i == 0 or x1[i] != x1[i -1]]
+
+list73 = [1, 1, 2, 2, 3, 3, 4, 5, 5, 1]
+print(remove_consecutive_duplicate(list73))
+
+# 74. Write a Python program to pack consecutive duplicates of a given list elements into sublists.
+def pack_consecutive_duplicates(x):
+    from itertools import groupby
+    return [list(group) for key, group in groupby(x)]
+
+list74 = [1, 1, 2, 3, 3, 3, 4, 5, 5]
+print(pack_consecutive_duplicates(list74))
+
+# 75. Write a Python program to create a list reflecting the run-length encoding from a given list of integers or a given list of characters.
+def come_on(x):
+    from itertools import groupby
+    return [
+        [len(list(group)), key] if len(list(group)) > 1 else [1, key] for key, group in groupby(x)
+    ]
+
+    '''result = []
+
+    for key, group in groupby(x):
+        if len(list(group)) > 1:
+            result.append([len(list(group)), key])
+        else:
+            result.append([1, key])
+        
+    return result
+list75 = [1, 1, 2, 3, 4, 4.3, 5, 1]
+print(come_on(list75))'''
+
+# 76. Write a Python program to create a list reflecting the modified run-length encoding from a given list of integers or a given list of characters
+def finish(x):
+    from itertools import groupby
+    return [
+        [len(list(group)), key] if len(list(group)) > 1 else key for key, group in groupby(x)
+    ]
+
+    '''result = []
+
+    for key, group in groupby(x):
+        if len(list(group)) > 1:
+            result.append([len(list(group)), key])
+        else:
+            result.append(key)
+    
+    return result'''
+
+list76 = [1, 1, 2, 3, 4, 4, 5, 1]
+print(finish(list76))
+
+# 77. Write a Python program to decode a run-length encoded given list.
+def decode_rle(encoded_list):
+    decoded_list = []
+
+    for element in encoded_list:
+        if isinstance(element, list):
+            counting, value = element
+            decoded_list.extend([value] * counting)
+        else:
+            decoded_list.append(element)
+    return decoded_list
+
+list77 = [[2, 1], 2, 3, [2, 4], 5, 1]
+print(decode_rle(list77))
+
+# 78. Write a Python program to split a given list into two parts where the length of the first part of the list is given.
+def splitting_cut(x1,x2):
+    result = [x1[:x2], x1[x2:]]
+    return result
+
+list78 = [1, 1, 2, 3, 4, 4, 5, 1]
+print(splitting_cut(list78, 3))
+
+
+# 79. Write a Python program to remove the K'th element from a given list, print the new list.
+def removing(x1, x2):
+    x1.remove(x2)
+
+list79 = [1, 2, 3, 4, 5]
+removing(list79, 2) 
+print(list79)
+
+
+# 80.  Write a Python program to insert an element at a specified position into a given list. 
+def inserting(x1, x2, x3):
+    x1.insert(x2, x3)
+
+list80 = [1, 1, 2, 3, 4, 4, 5, 1]
+inserting(list80, 3, 12)
+print(list80)
