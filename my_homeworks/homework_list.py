@@ -444,3 +444,164 @@ def add_bla(x):
 
 list40 = ["apple", "banana", "apricot", "blueberry", "cherry"]
 print(add_bla(list40))
+
+# 41. Write a Python program to create multiple lists.
+def multiple_list(x):
+    obj ={}
+    for i in range(1, x+1):
+        obj[i] = []
+    return obj
+
+list41 = 20
+print(multiple_list(list41))
+    
+
+# 42. Write a Python program to find missing and additional values in two lists.
+def miss_addition(x1, x2):
+    set1 = set(x1)
+    set2 = set(x2)
+
+    missing_value = set1 - set2
+    additional_value = set2 - set1
+
+    return f'the missing value is {missing_value} and additional value is {additional_value}' 
+
+list42 = [1, 2, 3, 4, 5]
+list42_copy = [4, 5, 6, 7, 8]
+print(miss_addition(list42, list42_copy))
+
+# 43. Write a Python program to split a list into different variables.
+def splitting(x):
+    return {f'var{i + 1}': value for i,value in enumerate(x) }
+
+list43 = [1, 2, 3, 4, 5]
+print(splitting(list43))
+
+# 44.  Write a Python program to generate groups of five consecutive numbers in a list.
+def mulitple_groups(start, end, group_size = 5):
+    groups = []
+    for i in range(start, end, group_size):
+        group = list(range(i, i + group_size))
+        groups.append(group)
+    return groups
+
+groups = mulitple_groups(1, 21)  # Generates groups from 1 to 20
+print(groups)
+
+# 45. Write a Python program to convert a pair of values into a sorted unique array.
+def ultimate_sort(x):
+    flatten_list = [j for i in x for j in i]
+    return sorted(set(flatten_list))
+
+
+list45 = [(1, 2), (3, 4), (1, 2), (5, 6), (7, 8), (1, 2), (3, 4), (3, 4), (7, 8), (9, 10)]
+print(ultimate_sort(list45))
+
+# 47. Write a Python program to insert an element before each element of a list.
+def blabber(x1, x2):
+    result = []
+    for i in x1:
+        result.append(x2)  # Add x2 first
+        result.append(i)   # Then add the current item
+    return result
+
+list47 = [1, 2, 3, 4, 5]
+insert_element = 0
+print(blabber(list47, insert_element))
+
+# 48. Write a Python program to print a nested lists (each list on a new line) using the print() function.
+def nested_seperate(x):
+    for i in x:
+        print(i)   
+
+list48 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+nested_seperate(list48)
+
+# 49. Write a Python program to convert list to list of dictionaries.
+def list_dict(x1, x2):
+    converted_to_dict = dict(zip(x1, x2))
+    
+    return converted_to_dict
+
+list49 = ["Black", "Red", "Maroon", "Yellow"]
+list49_copy =  ["#000000", "#FF0000", "#800000", "#FFFF00"]
+print(list_dict(list49, list49_copy))
+
+# 50. Write a Python program to sort a list of nested dictionaries.
+list50 = [{'key': {'subkey': 1}}, {'key': {'subkey': 10}}, {'key': {'subkey': 5}}]
+
+sorted_list = sorted(list50, key= lambda x: x['key']['subkey'], reverse= False)
+print("Sorted List:", sorted_list)
+
+# 51. Write a Python program to split a list every Nth element.\
+def split_list_every_nth(x1, x2):
+    return [x1[i:i + x2] for i in range(0,len(x1), x2)]
+
+list51 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+dummpy51 = 5  # Split every 5th element
+print(split_list_every_nth(list51, dummpy51))
+
+# 54 Write a Python program to concatenate elements of a list.
+def concatenate(x):
+    connect = ' '.join(x)
+    return connect
+
+list54 = ['Hello', 'World', 'Python', 'is', 'awesome']
+print(concatenate(list54))
+
+# 55. Write a Python program to remove key-value pairs from a list of dictionaries.
+def specific_dict(x):
+    keys_to_remove = 'key1'
+    return [{k: v for k, v in i.items() if k != keys_to_remove } for i in x]
+
+list55 = [{'key1': 'value1', 'key2': 'value2'}, {'key1': 'value3', 'key2': 'value4'}]
+print(specific_dict(list55))
+
+# 56. Write a Python program to convert a string to a list
+def string_list(x):
+    new_list = x.split()
+    return new_list
+
+string56 = "Hello World Python"
+print(string_list(string56))
+
+# 57. Write a Python program to check if all items in a given list of strings are equal to a given string.
+def checkis(x1, x2):
+    return all(i == x2 for i in x1)
+
+list57 = ["green", "green", "green", "green"]
+list57_copy = ["green", "orange", "black", "white"]
+print(checkis(list57, 'green'))
+print(checkis(list57_copy, 'green'))
+
+# 58.  Write a Python program to replace the last element in a list with another list.
+def replace_last(x1, x2):
+    return x1[:-1] + x2
+
+
+list58 = [1, 3, 5, 7, 9, 10]
+list58_copy = [2, 4, 6, 8]
+print(replace_last(list58, list58_copy))
+
+# 59.  Write a Python program to check whether the n-th element exists in a given list.
+def exist_not(x1, x2):
+    if -len(x1) <= x2 < len(x1):
+        return x1[x2]
+    else:
+        return 'index not available'
+    
+list59 = [10, 20, 30, 40, 50]
+
+print(exist_not(list59, 3)) 
+print(exist_not(list59, -1))   
+print(exist_not(list59, -6))  
+print(exist_not(list59, 10))
+
+
+# 60. Write a Python program to find a tuple, the smallest second index value from a list of tuples.
+def small_tuple(x):
+    return min(x, key=lambda i: i[1])
+
+list60 = [(4, 1), (1, 2), (6, 4),(5,0)]
+print(small_tuple(list60))
+
