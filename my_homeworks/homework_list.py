@@ -150,7 +150,7 @@ print(showdown)
 
 # 13. Write a Python program to generate a 3*4*6 3D array whose each element is *
 def arrays(layers, rows, columns):
-    result = [[['*' for _ in range(columns)] for _ in range(rows)] for _ in range(layers)]
+    # result = [[['*' for _ in range(columns)] for _ in range(rows)] for _ in range(layers)]
     '''for _ in range(layers):
         layer = []
         for _ in range(rows):
@@ -162,14 +162,24 @@ def arrays(layers, rows, columns):
 
         result.append(layer)'''
 
-    return result
+    # return result
+
+def d_arraying(x, y, z):
+    s =[['*' * x] * y] * z
+    for i in s:
+        print(i)
+    return s
+a= 3
+b = 4
+c = 6
+go = d_arraying(c,b,a)
 
 def print_3d_array(x):
-    for layer in x:
+    '''for layer in x:
         for row in layer:
             print(row)
 
-        print()
+        print()'''
 
 list13 = arrays(3,4,6)        
 print_3d_array(list13)
